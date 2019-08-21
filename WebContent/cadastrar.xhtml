@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"></link>  
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<h:head>
+	<title>Central</title>
+</h:head>
+<h:body>
+<center>
+	<h1>Cadastrar novo usuário</h1>
+	<hr></hr>
+	<br></br>
+	<h:form >
+		<h:panelGrid columns="2">
+			<h:outputLabel value="Novo Usuário: " />
+			<h:inputText styleClass="form-control border-dark"  value="#{loginController.usuario.login}" />
+
+			<h:outputLabel value="Nova Senha: " />
+			<h:inputSecret styleClass="form-control border-dark"  value="#{loginController.usuario.senha}" />
+			
+			<h:outputLabel value="Idade: " />
+			<h:inputSecret styleClass="form-control border-dark"  value="#{loginController.usuario.id}" />
+			
+			<h7><i>Ativo:</i></h7>
+			<h:selectBooleanCheckbox value="Ativo" id="#{loginController.usuario.ativo}" />
+			</h:panelGrid>
+	
+		<br></br>
+			<h:panelGrid columns="4">
+			<h:commandButton styleClass="btn btn-dark" value="Incluir"
+				action="#{loginController.cadastrar()}"  
+				onclick="alert('Dados Cadastrados!');"/>
+				
+			<h:commandButton styleClass="btn btn-dark" value="Limpar" />
+				
+			<h:commandButton styleClass="btn btn-dark" value="Alterar"/>
+			
+			<h:commandButton styleClass="btn btn-dark" value="Excluir"/>
+			</h:panelGrid>
+		
+	</h:form>
+	<br></br>
+	<hr></hr>
+	
+</center>
+	
+</h:body>
+</html>

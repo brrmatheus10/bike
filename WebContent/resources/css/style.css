@@ -1,0 +1,11 @@
+.centralizar {
+	text-align: center;
+}
+
+.centralizar-componente {
+	text-align: center;
+	margin-left: 20%;
+}
+.body{
+	background-color:red;
+}
